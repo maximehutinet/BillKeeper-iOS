@@ -7,7 +7,9 @@ struct ScannedDocumentView: View {
     @State private var loading = false
     @State private var uploadSuccess = false
     @State private var showAlertMessage = false
+    @State private var showLogOutConfirmationDialog = false
     @State private var alertMessage: String = ""
+    @StateObject private var authManager = AuthManager.shared
     
     var body: some View {
         if loading {
@@ -23,6 +25,19 @@ struct ScannedDocumentView: View {
                     }
                 } message: {
                     Text(alertMessage)
+                }
+                .confirmationDialog(
+                    "Do you really want to log out",
+                    isPresented: $showLogOutConfirmationDialog,
+                    titleVisibility: .visible
+                ) {
+                    Button("Cancel", role: .cancel) {
+                        showLogOutConfirmationDialog = false
+                    }
+                    Button("OK", role: .destructive) {
+                        authManager.logout()
+                        showLogOutConfirmationDialog = false
+                    }
                 }
                 .fullScreenCover(isPresented: $scan) {
                     VNCameraView(document: $document)
@@ -40,6 +55,15 @@ struct ScannedDocumentView: View {
                             .accessibilityLabel("Cancel")
                         }
                     } else {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button(action: {
+                                showLogOutConfirmationDialog = true
+                            }) {
+                                Image(systemName: "rectangle.portrait.and.arrow.right")
+                            }
+                            .accessibilityLabel("Log out")
+                        }
+                        
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: {
                                 scan.toggle()

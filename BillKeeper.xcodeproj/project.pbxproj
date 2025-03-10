@@ -3,32 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3B331FFE2D7EF50B0025DE7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B331FEF2D7EF50B0025DE7D /* Preview Assets.xcassets */; };
+		3B331FFF2D7EF50B0025DE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B331FF62D7EF50B0025DE7D /* Assets.xcassets */; };
+		3B3320012D7EF50B0025DE7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B331FFA2D7EF50B0025DE7D /* Launch Screen.storyboard */; };
+		3B3320022D7EF50B0025DE7D /* ScannedDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF22D7EF50B0025DE7D /* ScannedDocumentView.swift */; };
+		3B3320032D7EF50B0025DE7D /* ImageCarrouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF12D7EF50B0025DE7D /* ImageCarrouselView.swift */; };
+		3B3320042D7EF50B0025DE7D /* BillKeeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF72D7EF50B0025DE7D /* BillKeeperApp.swift */; };
+		3B3320052D7EF50B0025DE7D /* VNCameraCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FFC2D7EF50B0025DE7D /* VNCameraCoordinator.swift */; };
+		3B3320062D7EF50B0025DE7D /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FEB2D7EF50B0025DE7D /* Document.swift */; };
+		3B3320072D7EF50B0025DE7D /* VNCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF42D7EF50B0025DE7D /* VNCameraView.swift */; };
+		3B3320082D7EF50B0025DE7D /* PDFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FFB2D7EF50B0025DE7D /* PDFUtils.swift */; };
+		3B3320092D7EF50B0025DE7D /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF82D7EF50B0025DE7D /* HttpClient.swift */; };
+		3B33200A2D7EF50B0025DE7D /* UploadSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF32D7EF50B0025DE7D /* UploadSuccessView.swift */; };
+		3B33200B2D7EF50B0025DE7D /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FED2D7EF50B0025DE7D /* BlackButton.swift */; };
+		3B3320112D7EFF790025DE7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3320102D7EFF760025DE7D /* LoginView.swift */; };
+		B53ADA5D6AAD29B9DB94B0F6 /* Pods_BillKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0020AE031BE860EFB2B33B /* Pods_BillKeeper.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		11686A390A59883B72D89599 /* Pods-BillKeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillKeeper.debug.xcconfig"; path = "Target Support Files/Pods-BillKeeper/Pods-BillKeeper.debug.xcconfig"; sourceTree = "<group>"; };
+		3B331FEB2D7EF50B0025DE7D /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		3B331FED2D7EF50B0025DE7D /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
+		3B331FEF2D7EF50B0025DE7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B331FF12D7EF50B0025DE7D /* ImageCarrouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarrouselView.swift; sourceTree = "<group>"; };
+		3B331FF22D7EF50B0025DE7D /* ScannedDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedDocumentView.swift; sourceTree = "<group>"; };
+		3B331FF32D7EF50B0025DE7D /* UploadSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSuccessView.swift; sourceTree = "<group>"; };
+		3B331FF42D7EF50B0025DE7D /* VNCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNCameraView.swift; sourceTree = "<group>"; };
+		3B331FF62D7EF50B0025DE7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B331FF72D7EF50B0025DE7D /* BillKeeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillKeeperApp.swift; sourceTree = "<group>"; };
+		3B331FF82D7EF50B0025DE7D /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		3B331FF92D7EF50B0025DE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B331FFA2D7EF50B0025DE7D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3B331FFB2D7EF50B0025DE7D /* PDFUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFUtils.swift; sourceTree = "<group>"; };
+		3B331FFC2D7EF50B0025DE7D /* VNCameraCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNCameraCoordinator.swift; sourceTree = "<group>"; };
+		3B3320102D7EFF760025DE7D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B6CDEC22D6BAEC900439279 /* BillKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0020AE031BE860EFB2B33B /* Pods_BillKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE629B9165DDA761605A6E9 /* Pods-BillKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillKeeper.release.xcconfig"; path = "Target Support Files/Pods-BillKeeper/Pods-BillKeeper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3B6CDF1A2D6BB1C200439279 /* Exceptions for "BillKeeper" folder in "BillKeeper" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 3B6CDEC12D6BAEC900439279 /* BillKeeper */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3B6CDEC42D6BAEC900439279 /* BillKeeper */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3B6CDF1A2D6BB1C200439279 /* Exceptions for "BillKeeper" folder in "BillKeeper" target */,
-			);
-			path = BillKeeper;
-			sourceTree = "<group>";
-		};
+		3B33200C2D7EF8A20025DE7D /* Auth */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Auth; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +55,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53ADA5D6AAD29B9DB94B0F6 /* Pods_BillKeeper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F8A749ABBDBAD810874E981 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB0020AE031BE860EFB2B33B /* Pods_BillKeeper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B331FEC2D7EF50B0025DE7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B331FEB2D7EF50B0025DE7D /* Document.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B331FEE2D7EF50B0025DE7D /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3B331FED2D7EF50B0025DE7D /* BlackButton.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		3B331FF02D7EF50B0025DE7D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3B331FEF2D7EF50B0025DE7D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3B331FF52D7EF50B0025DE7D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B3320102D7EFF760025DE7D /* LoginView.swift */,
+				3B331FF12D7EF50B0025DE7D /* ImageCarrouselView.swift */,
+				3B331FF22D7EF50B0025DE7D /* ScannedDocumentView.swift */,
+				3B331FF32D7EF50B0025DE7D /* UploadSuccessView.swift */,
+				3B331FF42D7EF50B0025DE7D /* VNCameraView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3B331FFD2D7EF50B0025DE7D /* BillKeeper */ = {
+			isa = PBXGroup;
+			children = (
+				3B33200C2D7EF8A20025DE7D /* Auth */,
+				3B331FEC2D7EF50B0025DE7D /* Models */,
+				3B331FEE2D7EF50B0025DE7D /* Modifiers */,
+				3B331FF02D7EF50B0025DE7D /* Preview Content */,
+				3B331FF52D7EF50B0025DE7D /* Views */,
+				3B331FF62D7EF50B0025DE7D /* Assets.xcassets */,
+				3B331FF72D7EF50B0025DE7D /* BillKeeperApp.swift */,
+				3B331FF82D7EF50B0025DE7D /* HttpClient.swift */,
+				3B331FF92D7EF50B0025DE7D /* Info.plist */,
+				3B331FFA2D7EF50B0025DE7D /* Launch Screen.storyboard */,
+				3B331FFB2D7EF50B0025DE7D /* PDFUtils.swift */,
+				3B331FFC2D7EF50B0025DE7D /* VNCameraCoordinator.swift */,
+			);
+			path = BillKeeper;
+			sourceTree = "<group>";
+		};
 		3B6CDEB92D6BAEC900439279 = {
 			isa = PBXGroup;
 			children = (
+				3B331FFD2D7EF50B0025DE7D /* BillKeeper */,
 				3B6CDEC42D6BAEC900439279 /* BillKeeper */,
 				3B6CDEC32D6BAEC900439279 /* Products */,
+				5F7E9D5204110AFFB3548AC6 /* Pods */,
+				0F8A749ABBDBAD810874E981 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +144,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3B6CDEC42D6BAEC900439279 /* BillKeeper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BillKeeper;
+			sourceTree = "<group>";
+		};
+		5F7E9D5204110AFFB3548AC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11686A390A59883B72D89599 /* Pods-BillKeeper.debug.xcconfig */,
+				ACE629B9165DDA761605A6E9 /* Pods-BillKeeper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,20 +167,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B6CDED02D6BAECB00439279 /* Build configuration list for PBXNativeTarget "BillKeeper" */;
 			buildPhases = (
+				AAB7A12AB2FF4844322658AA /* [CP] Check Pods Manifest.lock */,
 				3B6CDEBE2D6BAEC900439279 /* Sources */,
 				3B6CDEBF2D6BAEC900439279 /* Frameworks */,
 				3B6CDEC02D6BAEC900439279 /* Resources */,
+				888CF4E0891A2DDFBBA2C432 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3B6CDEC42D6BAEC900439279 /* BillKeeper */,
+				3B33200C2D7EF8A20025DE7D /* Auth */,
 			);
 			name = BillKeeper;
-			packageProductDependencies = (
-			);
 			productName = BillKeeper;
 			productReference = 3B6CDEC22D6BAEC900439279 /* BillKeeper.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +201,7 @@
 				};
 			};
 			buildConfigurationList = 3B6CDEBD2D6BAEC900439279 /* Build configuration list for PBXProject "BillKeeper" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -106,8 +209,6 @@
 				Base,
 			);
 			mainGroup = 3B6CDEB92D6BAEC900439279;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 3B6CDEC32D6BAEC900439279 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,16 +223,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B331FFE2D7EF50B0025DE7D /* Preview Assets.xcassets in Resources */,
+				3B331FFF2D7EF50B0025DE7D /* Assets.xcassets in Resources */,
+				3B3320012D7EF50B0025DE7D /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		888CF4E0891A2DDFBBA2C432 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BillKeeper/Pods-BillKeeper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BillKeeper/Pods-BillKeeper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BillKeeper/Pods-BillKeeper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAB7A12AB2FF4844322658AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BillKeeper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B6CDEBE2D6BAEC900439279 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3320022D7EF50B0025DE7D /* ScannedDocumentView.swift in Sources */,
+				3B3320032D7EF50B0025DE7D /* ImageCarrouselView.swift in Sources */,
+				3B3320042D7EF50B0025DE7D /* BillKeeperApp.swift in Sources */,
+				3B3320052D7EF50B0025DE7D /* VNCameraCoordinator.swift in Sources */,
+				3B3320062D7EF50B0025DE7D /* Document.swift in Sources */,
+				3B3320072D7EF50B0025DE7D /* VNCameraView.swift in Sources */,
+				3B3320112D7EFF790025DE7D /* LoginView.swift in Sources */,
+				3B3320082D7EF50B0025DE7D /* PDFUtils.swift in Sources */,
+				3B3320092D7EF50B0025DE7D /* HttpClient.swift in Sources */,
+				3B33200A2D7EF50B0025DE7D /* UploadSuccessView.swift in Sources */,
+				3B33200B2D7EF50B0025DE7D /* BlackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +416,7 @@
 		};
 		3B6CDED12D6BAECB00439279 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11686A390A59883B72D89599 /* Pods-BillKeeper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -267,6 +425,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BillKeeper/Preview Content\"";
 				DEVELOPMENT_TEAM = 4FBU395552;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BillKeeper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Bill Keeper";
@@ -275,6 +434,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
@@ -297,6 +457,7 @@
 		};
 		3B6CDED22D6BAECB00439279 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE629B9165DDA761605A6E9 /* Pods-BillKeeper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +466,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BillKeeper/Preview Content\"";
 				DEVELOPMENT_TEAM = 4FBU395552;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BillKeeper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Bill Keeper";
@@ -313,6 +475,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;

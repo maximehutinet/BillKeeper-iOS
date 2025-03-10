@@ -15,6 +15,8 @@ enum HttpError: Error {
 
 final public class HttpClient {
     
+    private var authManager = AuthManager.shared
+    
     func baseUrl() -> URL? {
         guard let urlString = Bundle.main.object(forInfoDictionaryKey: "ServerUrl") as? String,
               let url = URL(string: urlString) else {
@@ -28,30 +30,34 @@ final public class HttpClient {
     }
     
     func sendMultipartRequest(data: Data, filename: String, path: String) async throws {
-            let boundary = "Boundary-\(UUID().uuidString)"
-            guard let url = url(path: path) else {
-                throw HttpError.invalidUrl
-            }
+        let boundary = "Boundary-\(UUID().uuidString)"
+        guard let url = url(path: path) else {
+            throw HttpError.invalidUrl
+        }
+    
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.httpBody = createMultipartBody(
+            boundary: boundary,
+            data: data,
+            mimeType: "application/pdf",
+            filename: filename
+        )
         
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-            request.httpBody = createMultipartBody(
-                boundary: boundary,
-                data: data,
-                mimeType: "application/pdf",
-                filename: filename
-            )
+        if let token = await authManager.getAccessToken() {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
 
-            do {
-                let (_, response) = try await URLSession.shared.data(for: request, delegate: nil)
-                guard let response = response as? HTTPURLResponse else {
-                    throw HttpError.noResponse
-                }
-                try handleHttpResponseStatusCode(code: response.statusCode)
-            } catch let error {
-                try handleError(error: error)
+        do {
+            let (_, response) = try await URLSession.shared.data(for: request, delegate: nil)
+            guard let response = response as? HTTPURLResponse else {
+                throw HttpError.noResponse
             }
+            try handleHttpResponseStatusCode(code: response.statusCode)
+        } catch let error {
+            try handleError(error: error)
+        }
     }
     
     func createMultipartBody(boundary: String, data: Data, mimeType: String, filename: String) -> Data {
