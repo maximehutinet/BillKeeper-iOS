@@ -1,7 +1,9 @@
 import AppAuth
 
 enum AuthError: Error {
+    case authorizationFailed(reason: String)
     case noAuthState
+    case noConfiguration(reason: String)
     case refreshFailed
 }
 
@@ -13,47 +15,77 @@ class AuthManager: ObservableObject {
     
     private var configuration: OIDServiceConfiguration?
     
-    private let keycloakIssuerURL = URL(string: "http://10.0.0.23:10493/realms/billkeeper")!
-    private let keycloakClientID = "billkeeper-ios"
-    private let redirectURI = URL(string: "com.billkeeper.app:/oauth2redirect/provider")!
+    private let keycloakIssuerUrl: URL? = BundleUtils.getBundleValue(key: "KeycloakIssuerUrl")
+    private let keycloakClientId: String? = BundleUtils.getBundleValue(key: "KeycloakClientId")
+    private let keycloakRedirectURI: URL? = BundleUtils.getBundleValue(key: "KeycloakRedirectURI")
     private let scopes = ["openid", "profile", "email"]
     private let keychainService = "com.billkeeper.auth"
     private let keychainAccount = "authState"
     
     private init() {
-        discoverConfiguration()
+        discoverConfiguration() {_ in }
     }
     
-    func discoverConfiguration() {
-        OIDAuthorizationService.discoverConfiguration(forIssuer: keycloakIssuerURL) { configuration, error in
+    func keycloakVariablesAreSet() -> Bool {
+        guard let issuerUrl = keycloakIssuerUrl,
+              let clientId = keycloakClientId, !clientId.isEmpty,
+              let redirectUri = keycloakRedirectURI else {
+            return false
+        }
+        return true
+    }
+    
+    func discoverConfiguration(failure: @escaping (Error?) -> Void) {
+        OIDAuthorizationService.discoverConfiguration(forIssuer: keycloakIssuerUrl!) { configuration, error in
+            if let error = error {
+                failure(error)
+                return
+            }
             if let config = configuration {
                 self.configuration = config
             }
         }
     }
     
-    func startAuth(presenting viewController: UIViewController) {
+    func startAuth(presenting viewController: UIViewController, completion: @escaping (Result<OIDAuthState, AuthError>) -> Void) {
+        if !keycloakVariablesAreSet() {
+            completion(.failure(AuthError.noConfiguration(reason: "Info.plist not set properly")))
+        }
+        
         guard let config = configuration else {
-            discoverConfiguration()
+            discoverConfiguration() { failure in
+                if failure != nil {
+                    completion(.failure(AuthError.noConfiguration(reason: failure!.localizedDescription)))
+                    return
+                }
+            }
             return
         }
         
         let request = OIDAuthorizationRequest(
             configuration: config,
-            clientId: keycloakClientID,
+            clientId: keycloakClientId!,
             scopes: scopes,
-            redirectURL: redirectURI,
+            redirectURL: keycloakRedirectURI!,
             responseType: OIDResponseTypeCode,
             additionalParameters: nil
         )
-        
+
         currentAuthorizationFlow = OIDAuthState.authState(
             byPresenting: request,
             presenting: viewController
         ) { authState, error in
-            if let state = authState {
-                self.authState = state
+            if error != nil {
+                completion(.failure(AuthError.authorizationFailed(reason: error!.localizedDescription)))
+                return
+            }
+            
+            if let authState = authState {
+                self.authState = authState
                 self.storeAuthState()
+                completion(.success(authState))
+            } else {
+                completion(.failure(AuthError.noAuthState))
             }
         }
     }

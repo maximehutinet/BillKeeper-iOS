@@ -7,7 +7,7 @@ struct BillKeeperApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if authManager.isLoggedIn() {
+            if authManager.authState != nil && !authManager.isAccessTokenExpired() {
                 ScannedDocumentView()
             } else {
                 LoginView()
