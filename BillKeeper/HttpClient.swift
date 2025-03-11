@@ -112,5 +112,31 @@ final public class HttpClient {
             break
         }
     }
+    
+    static func getAlertMessage(error: HttpError) -> String {
+        let baseMessage = "Upload failed: "
+        return switch error {
+        case .networkError:
+            baseMessage + "Network error"
+        case .unknown:
+            baseMessage + "Unknown error"
+        case .notFound:
+            baseMessage + "Not found"
+        case .badRequest:
+            baseMessage + "Bad request"
+        case .serverError:
+            baseMessage + "Server error"
+        case .noInternetConnection:
+            baseMessage + "No internet connection"
+        case .invalidUrl:
+            baseMessage + "Invalid URL"
+        case .invalidData:
+            baseMessage + "Invalid data"
+        case .noResponse:
+            baseMessage + "No response"
+        case .unauthorized:
+            baseMessage + "Authentication error"
+        }
+    }
 }
 

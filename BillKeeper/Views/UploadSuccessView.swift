@@ -1,12 +1,16 @@
 import SwiftUI
 
 struct UploadSuccessView: View {
+    @Binding var scanStatus: ScanStatus
+    
     var body: some View {
-        NavigationStack {
+        VStack {
             VStack(spacing: 20) {
                 Text("Upload Success")
-                NavigationLink("New scan", destination: ScannedDocumentView())
-                    .buttonStyle(BlackButton())
+                Button("New scan") {
+                    scanStatus = .waitingForScan
+                }
+                .buttonStyle(BlackButton())
             }
         }
         .onAppear() {
