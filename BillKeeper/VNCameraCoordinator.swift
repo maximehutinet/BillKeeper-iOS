@@ -13,8 +13,11 @@ final class VNCameraCoordinator: NSObject, VNDocumentCameraViewControllerDelegat
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
         var images: [UIImage] = []
         for i in 0..<scan.pageCount {
-            let image = makeImageOpaque(image: scan.imageOfPage(at: i))
-            images.append(image)
+            let originalImage = scan.imageOfPage(at: i)
+            let processedImage = ImageUtils(image: originalImage)
+                .compressImage()
+                .getImage()
+            images.append(processedImage)
         }
         document = Document(images: images)
         dismiss()
@@ -28,13 +31,5 @@ final class VNCameraCoordinator: NSObject, VNDocumentCameraViewControllerDelegat
         dismiss()
     }
     
-    func makeImageOpaque(image: UIImage) -> UIImage {
-        let format = UIGraphicsImageRendererFormat()
-        format.opaque = true
-        let renderer = UIGraphicsImageRenderer(size: image.size, format: format)
-
-        return renderer.image { _ in
-            image.draw(in: CGRect(origin: .zero, size: image.size))
-        }
-    }
+    
 }

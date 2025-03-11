@@ -14,7 +14,7 @@ struct AppView: View {
         case .waitingForScan:
             ScannedDocumentView(scanStatus: $scanStatus)
         case .uploadingScan:
-            ProgressView("Uploading document")
+            ProgressView("Uploading to server")
                 .controlSize(.large)
         case .scanUploaded:
             UploadSuccessView(scanStatus: $scanStatus)

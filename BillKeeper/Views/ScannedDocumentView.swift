@@ -68,12 +68,12 @@ struct ScannedDocumentView: View {
             
             if (document != nil) {
                 VStack(spacing: 20) {
-                    Button("Upload", action: {
+                    Button("Create bill", action: {
                         uploadDocument(isBill: true)
                     })
                     .buttonStyle(BlackButton())
                     
-                    Button("Upload as document", action: {
+                    Button("Create document", action: {
                         uploadDocument()
                     })
                 }

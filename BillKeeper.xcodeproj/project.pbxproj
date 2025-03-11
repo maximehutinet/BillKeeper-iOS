@@ -16,12 +16,10 @@
 		3B3320052D7EF50B0025DE7D /* VNCameraCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FFC2D7EF50B0025DE7D /* VNCameraCoordinator.swift */; };
 		3B3320062D7EF50B0025DE7D /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FEB2D7EF50B0025DE7D /* Document.swift */; };
 		3B3320072D7EF50B0025DE7D /* VNCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF42D7EF50B0025DE7D /* VNCameraView.swift */; };
-		3B3320082D7EF50B0025DE7D /* PDFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FFB2D7EF50B0025DE7D /* PDFUtils.swift */; };
 		3B3320092D7EF50B0025DE7D /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF82D7EF50B0025DE7D /* HttpClient.swift */; };
 		3B33200A2D7EF50B0025DE7D /* UploadSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF32D7EF50B0025DE7D /* UploadSuccessView.swift */; };
 		3B33200B2D7EF50B0025DE7D /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FED2D7EF50B0025DE7D /* BlackButton.swift */; };
 		3B3320112D7EFF790025DE7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3320102D7EFF760025DE7D /* LoginView.swift */; };
-		3B3949A72D808186002056E3 /* BundleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3949A62D80817F002056E3 /* BundleUtils.swift */; };
 		3B7A16962D80D00900CD9F7F /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A16952D80CFC500CD9F7F /* AppView.swift */; };
 		B53ADA5D6AAD29B9DB94B0F6 /* Pods_BillKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0020AE031BE860EFB2B33B /* Pods_BillKeeper.framework */; };
 /* End PBXBuildFile section */
@@ -40,10 +38,8 @@
 		3B331FF82D7EF50B0025DE7D /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		3B331FF92D7EF50B0025DE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B331FFA2D7EF50B0025DE7D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		3B331FFB2D7EF50B0025DE7D /* PDFUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFUtils.swift; sourceTree = "<group>"; };
 		3B331FFC2D7EF50B0025DE7D /* VNCameraCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNCameraCoordinator.swift; sourceTree = "<group>"; };
 		3B3320102D7EFF760025DE7D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		3B3949A62D80817F002056E3 /* BundleUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleUtils.swift; sourceTree = "<group>"; };
 		3B6CDEC22D6BAEC900439279 /* BillKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7A16952D80CFC500CD9F7F /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		AB0020AE031BE860EFB2B33B /* Pods_BillKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +48,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3B33200C2D7EF8A20025DE7D /* Auth */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Auth; sourceTree = "<group>"; };
+		3B7A16972D80E03600CD9F7F /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +111,7 @@
 		3B331FFD2D7EF50B0025DE7D /* BillKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				3B7A16972D80E03600CD9F7F /* Utils */,
 				3B33200C2D7EF8A20025DE7D /* Auth */,
 				3B331FEC2D7EF50B0025DE7D /* Models */,
 				3B331FEE2D7EF50B0025DE7D /* Modifiers */,
@@ -124,9 +122,7 @@
 				3B331FF82D7EF50B0025DE7D /* HttpClient.swift */,
 				3B331FF92D7EF50B0025DE7D /* Info.plist */,
 				3B331FFA2D7EF50B0025DE7D /* Launch Screen.storyboard */,
-				3B331FFB2D7EF50B0025DE7D /* PDFUtils.swift */,
 				3B331FFC2D7EF50B0025DE7D /* VNCameraCoordinator.swift */,
-				3B3949A62D80817F002056E3 /* BundleUtils.swift */,
 			);
 			path = BillKeeper;
 			sourceTree = "<group>";
@@ -185,6 +181,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				3B33200C2D7EF8A20025DE7D /* Auth */,
+				3B7A16972D80E03600CD9F7F /* Utils */,
 			);
 			name = BillKeeper;
 			productName = BillKeeper;
@@ -285,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B3320022D7EF50B0025DE7D /* ScannedDocumentView.swift in Sources */,
-				3B3949A72D808186002056E3 /* BundleUtils.swift in Sources */,
 				3B3320032D7EF50B0025DE7D /* ImageCarrouselView.swift in Sources */,
 				3B3320042D7EF50B0025DE7D /* BillKeeperApp.swift in Sources */,
 				3B3320052D7EF50B0025DE7D /* VNCameraCoordinator.swift in Sources */,
@@ -293,7 +289,6 @@
 				3B3320072D7EF50B0025DE7D /* VNCameraView.swift in Sources */,
 				3B7A16962D80D00900CD9F7F /* AppView.swift in Sources */,
 				3B3320112D7EFF790025DE7D /* LoginView.swift in Sources */,
-				3B3320082D7EF50B0025DE7D /* PDFUtils.swift in Sources */,
 				3B3320092D7EF50B0025DE7D /* HttpClient.swift in Sources */,
 				3B33200A2D7EF50B0025DE7D /* UploadSuccessView.swift in Sources */,
 				3B33200B2D7EF50B0025DE7D /* BlackButton.swift in Sources */,
