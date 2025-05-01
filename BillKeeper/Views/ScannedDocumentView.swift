@@ -8,6 +8,9 @@ struct ScannedDocumentView: View {
     @State private var alertMessage: String = ""
     @StateObject private var authManager = AuthManager.shared
     @Binding var scanStatus: ScanStatus
+    @State private var showBillsToSelectFrom: Bool = false
+    @State private var bills: [Bill] = []
+    @State private var selectedBillId: UUID? = nil
     
     var body: some View {
         NavigationStack {
@@ -36,6 +39,20 @@ struct ScannedDocumentView: View {
                 .fullScreenCover(isPresented: $showScan) {
                     VNCameraView(document: $document)
                         .ignoresSafeArea()
+                }
+                .sheet(isPresented: $showBillsToSelectFrom, onDismiss: { selectedBillId = nil }) {
+                    VStack {
+                        BillListView(bills: $bills, selectedBillId: $selectedBillId)
+                            .presentationDetents([.medium, .large])
+                        Spacer()
+                        if (selectedBillId != nil) {
+                            Button("Add to bill") {
+                                addDocumentToBill()
+                            }
+                            .buttonStyle(BlackButton())
+                        }
+                    }
+                    
                 }
                 .toolbar {
                     if document != nil {
@@ -69,28 +86,64 @@ struct ScannedDocumentView: View {
             if (document != nil) {
                 VStack(spacing: 20) {
                     Button("Create bill", action: {
-                        uploadDocument(isBill: true)
+                        createBill()
                     })
                     .buttonStyle(BlackButton())
                     
-                    Button("Create document", action: {
-                        uploadDocument()
+                    Button("Add document to bill", action: {
+                        prepareAddToBillSheetData()
                     })
                 }
             }
         }
     }
     
-    func uploadDocument(isBill: Bool = false) {
+    func prepareAddToBillSheetData() {
+        let httpClient = HttpClient()
+        if document != nil {
+            Task {
+                do {
+                    self.bills = try await httpClient.getRequest(path: "/bills") ?? [];
+                    self.showBillsToSelectFrom = true
+                } catch let error as HttpError {
+                    alertMessage = HttpClient.getAlertMessage(error: error)
+                    showAlertMessage = true
+                }
+            }
+        }
+    }
+    
+    func createBill() {
         let httpClient = HttpClient()
         if document != nil {
             Task {
                 do {
                     scanStatus = .uploadingScan
                     if let pdfData = PDFUtils.pdfFromDocument(document: document!) {
-                        try await httpClient.sendMultipartRequest(data: pdfData, filename: document?.id.uuidString ?? "", path: isBill ? "/bills" : "/documents")
+                        try await httpClient.sendMultipartRequest(data: pdfData, filename: document?.id.uuidString ?? "", path: "/bills")
                         scanStatus = .scanUploaded
                         document = nil
+                    }
+                } catch let error as HttpError {
+                    alertMessage = HttpClient.getAlertMessage(error: error)
+                    showAlertMessage = true
+                }
+            }
+        }
+    }
+    
+    func addDocumentToBill() {
+        let httpClient = HttpClient()
+        if document != nil && selectedBillId != nil {
+            Task {
+                do {
+                    scanStatus = .uploadingScan
+                    if let pdfData = PDFUtils.pdfFromDocument(document: document!) {
+                        try await httpClient.sendMultipartRequest(data: pdfData, filename: document?.id.uuidString ?? "", path: "/bills/\(selectedBillId!)/documents")
+                        scanStatus = .scanUploaded
+                        document = nil
+                        selectedBillId = nil
+                        showBillsToSelectFrom = false
                     }
                 } catch let error as HttpError {
                     alertMessage = HttpClient.getAlertMessage(error: error)

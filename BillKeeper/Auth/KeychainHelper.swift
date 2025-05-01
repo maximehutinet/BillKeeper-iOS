@@ -21,7 +21,7 @@ class KeychainHelper {
     }
 
     func readData(service: String, account: String) -> Data? {
-        var query: [String: Any] = [
+        let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
             kSecAttrAccount as String: account,
@@ -36,7 +36,7 @@ class KeychainHelper {
     }
     
     func deleteData(service: String, account: String) {
-        var query: [String: Any] = [
+        let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
             kSecAttrAccount as String: account

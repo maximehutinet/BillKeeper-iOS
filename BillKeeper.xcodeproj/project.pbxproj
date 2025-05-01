@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0A6D7C2DC3A2650047C114 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A6D7B2DC3A2600047C114 /* Bill.swift */; };
+		3B141FC02DC4F9A20048828F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B141FBF2DC4F9A00048828F /* User.swift */; };
+		3B141FC22DC4FC810048828F /* Beneficiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B141FC12DC4FC7E0048828F /* Beneficiary.swift */; };
+		3B141FC42DC4FCE80048828F /* ParsingJobStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B141FC32DC4FCE60048828F /* ParsingJobStatus.swift */; };
 		3B331FFE2D7EF50B0025DE7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B331FEF2D7EF50B0025DE7D /* Preview Assets.xcassets */; };
 		3B331FFF2D7EF50B0025DE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B331FF62D7EF50B0025DE7D /* Assets.xcassets */; };
 		3B3320012D7EF50B0025DE7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B331FFA2D7EF50B0025DE7D /* Launch Screen.storyboard */; };
@@ -21,11 +25,16 @@
 		3B33200B2D7EF50B0025DE7D /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FED2D7EF50B0025DE7D /* BlackButton.swift */; };
 		3B3320112D7EFF790025DE7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3320102D7EFF760025DE7D /* LoginView.swift */; };
 		3B7A16962D80D00900CD9F7F /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A16952D80CFC500CD9F7F /* AppView.swift */; };
+		3BD5C3D52E3386F800499BB1 /* BillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5C3D42E3386E500499BB1 /* BillListView.swift */; };
 		B53ADA5D6AAD29B9DB94B0F6 /* Pods_BillKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0020AE031BE860EFB2B33B /* Pods_BillKeeper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11686A390A59883B72D89599 /* Pods-BillKeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillKeeper.debug.xcconfig"; path = "Target Support Files/Pods-BillKeeper/Pods-BillKeeper.debug.xcconfig"; sourceTree = "<group>"; };
+		3B0A6D7B2DC3A2600047C114 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		3B141FBF2DC4F9A00048828F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3B141FC12DC4FC7E0048828F /* Beneficiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beneficiary.swift; sourceTree = "<group>"; };
+		3B141FC32DC4FCE60048828F /* ParsingJobStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingJobStatus.swift; sourceTree = "<group>"; };
 		3B331FEB2D7EF50B0025DE7D /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		3B331FED2D7EF50B0025DE7D /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		3B331FEF2D7EF50B0025DE7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -42,6 +51,7 @@
 		3B3320102D7EFF760025DE7D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B6CDEC22D6BAEC900439279 /* BillKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7A16952D80CFC500CD9F7F /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		3BD5C3D42E3386E500499BB1 /* BillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListView.swift; sourceTree = "<group>"; };
 		AB0020AE031BE860EFB2B33B /* Pods_BillKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE629B9165DDA761605A6E9 /* Pods-BillKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillKeeper.release.xcconfig"; path = "Target Support Files/Pods-BillKeeper/Pods-BillKeeper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +84,10 @@
 		3B331FEC2D7EF50B0025DE7D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3B141FC32DC4FCE60048828F /* ParsingJobStatus.swift */,
+				3B141FC12DC4FC7E0048828F /* Beneficiary.swift */,
+				3B141FBF2DC4F9A00048828F /* User.swift */,
+				3B0A6D7B2DC3A2600047C114 /* Bill.swift */,
 				3B331FEB2D7EF50B0025DE7D /* Document.swift */,
 			);
 			path = Models;
@@ -98,6 +112,7 @@
 		3B331FF52D7EF50B0025DE7D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3BD5C3D42E3386E500499BB1 /* BillListView.swift */,
 				3B7A16952D80CFC500CD9F7F /* AppView.swift */,
 				3B3320102D7EFF760025DE7D /* LoginView.swift */,
 				3B331FF12D7EF50B0025DE7D /* ImageCarrouselView.swift */,
@@ -243,9 +258,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BillKeeper/Pods-BillKeeper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BillKeeper/Pods-BillKeeper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -282,16 +301,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B3320022D7EF50B0025DE7D /* ScannedDocumentView.swift in Sources */,
+				3BD5C3D52E3386F800499BB1 /* BillListView.swift in Sources */,
+				3B141FC22DC4FC810048828F /* Beneficiary.swift in Sources */,
 				3B3320032D7EF50B0025DE7D /* ImageCarrouselView.swift in Sources */,
 				3B3320042D7EF50B0025DE7D /* BillKeeperApp.swift in Sources */,
 				3B3320052D7EF50B0025DE7D /* VNCameraCoordinator.swift in Sources */,
 				3B3320062D7EF50B0025DE7D /* Document.swift in Sources */,
+				3B141FC42DC4FCE80048828F /* ParsingJobStatus.swift in Sources */,
 				3B3320072D7EF50B0025DE7D /* VNCameraView.swift in Sources */,
 				3B7A16962D80D00900CD9F7F /* AppView.swift in Sources */,
 				3B3320112D7EFF790025DE7D /* LoginView.swift in Sources */,
 				3B3320092D7EF50B0025DE7D /* HttpClient.swift in Sources */,
 				3B33200A2D7EF50B0025DE7D /* UploadSuccessView.swift in Sources */,
 				3B33200B2D7EF50B0025DE7D /* BlackButton.swift in Sources */,
+				3B0A6D7C2DC3A2650047C114 /* Bill.swift in Sources */,
+				3B141FC02DC4F9A20048828F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

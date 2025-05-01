@@ -29,6 +29,60 @@ final public class HttpClient {
         baseUrl()?.appendingPathComponent(path)
     }
     
+    func getRequest<T: Decodable>(path: String) async throws -> T? {
+        guard let url = url(path: path) else {
+            throw HttpError.invalidUrl
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        if let token = await authManager.getAccessToken() {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
+            guard let response = response as? HTTPURLResponse else {
+                throw HttpError.noResponse
+            }
+            try handleHttpResponseStatusCode(code: response.statusCode)
+            
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = getCustomDateDecoding()
+            return try decoder.decode(T.self, from: data)
+        } catch let error {
+            try handleError(error: error)
+        }
+        return nil;
+    }
+    
+    func getCustomDateDecoding() -> JSONDecoder.DateDecodingStrategy {
+        return .custom { decoder -> Date in
+            let container = try decoder.singleValueContainer()
+            let dateString = try container.decode(String.self)
+            
+            let formats = [
+                "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'",
+                "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                "yyyy-MM-dd'T'HH:mm:ssZ"
+            ]
+            
+            for format in formats {
+                let formatter = DateFormatter()
+                formatter.dateFormat = format
+                formatter.locale = Locale(identifier: "en_US_POSIX")
+                formatter.timeZone = TimeZone(secondsFromGMT: 0)
+                
+                if let date = formatter.date(from: dateString) {
+                    return date
+                }
+            }
+            
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Invalid date: \(dateString)")
+        }
+    }
+    
     func sendMultipartRequest(data: Data, filename: String, path: String) async throws {
         let boundary = "Boundary-\(UUID().uuidString)"
         guard let url = url(path: path) else {
@@ -114,7 +168,7 @@ final public class HttpClient {
     }
     
     static func getAlertMessage(error: HttpError) -> String {
-        let baseMessage = "Upload failed: "
+        let baseMessage = "Action failed: "
         return switch error {
         case .networkError:
             baseMessage + "Network error"
