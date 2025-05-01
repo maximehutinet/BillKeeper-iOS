@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>ServerUrl</key>
-	<string>http://10.0.0.23:8080</string>
+	<string>https://server.billkeeper.hutinet.fr</string>
 	<key>KeycloakIssuerUrl</key>
-	<string>http://10.0.0.23:10493/realms/billkeeper</string>
+	<string>https://auth.billkeeper.hutinet.fr/realms/billkeeper</string>
 	<key>KeycloakClientId</key>
 	<string>billkeeper-ios</string>
 	<key>KeycloakRedirectURI</key>

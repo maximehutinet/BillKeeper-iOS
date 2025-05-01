@@ -17,7 +17,7 @@
 		287DDAF293B5DD940AB04DF7842B5A7C /* OIDResponseTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8223C2D685A44F999305FF3C99F89F75 /* OIDResponseTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29241B2BB72959C159BDCEE52B6B8805 /* OIDIDToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E44DFFB8D51BFC244B6CB374347F4EE /* OIDIDToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DBF25B31DD495FF81FC90CEBAD80176 /* OIDScopeUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 77EB31668093DE2FF54C3F6D022DE08D /* OIDScopeUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		310AEC030BEECE38DEB35C48C8238F70 /* AppAuth-AppAuthCore_Privacy in Resources */ = {isa = PBXBuildFile; fileRef = EF9852680BCD6EC8B15F622B5B92A838 /* AppAuth-AppAuthCore_Privacy */; };
+		310AEC030BEECE38DEB35C48C8238F70 /* AppAuthCore_Privacy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF9852680BCD6EC8B15F622B5B92A838 /* AppAuthCore_Privacy.bundle */; };
 		3240253830E367917124024B7924D1E0 /* OIDErrorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B71A951839C2B17CF2B2CFC2BFF1B3B /* OIDErrorUtilities.m */; };
 		329FD409C5A67DC3BE9E28E93E7A55DB /* OIDAuthorizationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 106D754A6662441B75F06E27565F646E /* OIDAuthorizationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32CE2ED8B8441A3CB8A513C6A1505D89 /* OIDAuthorizationService+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC9F1482602BCFD44C22504DBC22BAA /* OIDAuthorizationService+IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -123,10 +123,10 @@
 		3189926983B5029EE5AE253D003465B4 /* OIDServiceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceConfiguration.h; path = Sources/AppAuthCore/OIDServiceConfiguration.h; sourceTree = "<group>"; };
 		374BE34709A96E889A3C7CC40D9F473B /* OIDExternalUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgent.h; path = Sources/AppAuthCore/OIDExternalUserAgent.h; sourceTree = "<group>"; };
 		3B71A951839C2B17CF2B2CFC2BFF1B3B /* OIDErrorUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDErrorUtilities.m; path = Sources/AppAuthCore/OIDErrorUtilities.m; sourceTree = "<group>"; };
-		3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F4E7C507F343F792345D191456CB4F /* Pods-BillKeeper-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BillKeeper-frameworks.sh"; sourceTree = "<group>"; };
 		48DBC1182C8415D263FF3E4D6A690614 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4ED2AD294BAE9F0DB54427F7A6CD8035 /* Pods-BillKeeper */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BillKeeper"; path = Pods_BillKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED2AD294BAE9F0DB54427F7A6CD8035 /* Pods_BillKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D5E29F9D8327B2D13BD9835FB08AEE /* OIDScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopes.h; path = Sources/AppAuthCore/OIDScopes.h; sourceTree = "<group>"; };
 		55878DAC63DE5577CEA1AEB446CF54E6 /* OIDTokenResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenResponse.h; path = Sources/AppAuthCore/OIDTokenResponse.h; sourceTree = "<group>"; };
 		565626E08807E15DA6EAD42D083CA8E8 /* OIDRegistrationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationResponse.h; path = Sources/AppAuthCore/OIDRegistrationResponse.h; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		983CFE82B0C123BB63CBE9823D6F1361 /* OIDAuthState+IOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OIDAuthState+IOS.h"; path = "Sources/AppAuth/iOS/OIDAuthState+IOS.h"; sourceTree = "<group>"; };
 		9A6D7351D43DCCAF7F07A678D12239D7 /* Pods-BillKeeper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BillKeeper-Info.plist"; sourceTree = "<group>"; };
 		9CAD9CEEA03C1418BB62006AE4828F3D /* OIDAuthState+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthState+IOS.m"; path = "Sources/AppAuth/iOS/OIDAuthState+IOS.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DBFAB17446D8E275196ACA861DEEDD4 /* OIDExternalUserAgentIOSCustomBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentIOSCustomBrowser.m; path = Sources/AppAuth/iOS/OIDExternalUserAgentIOSCustomBrowser.m; sourceTree = "<group>"; };
 		A2B8A8234408C142E646C9C61607F333 /* AppAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AppAuth.modulemap; sourceTree = "<group>"; };
 		A53F31B2BF4FB7197AB3278B779D71E9 /* OIDRegistrationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationResponse.m; path = Sources/AppAuthCore/OIDRegistrationResponse.m; sourceTree = "<group>"; };
@@ -185,8 +185,8 @@
 		D62D5AC99217229C7CA2E95BAD750C2C /* OIDExternalUserAgentCatalyst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentCatalyst.m; path = Sources/AppAuth/iOS/OIDExternalUserAgentCatalyst.m; sourceTree = "<group>"; };
 		DC7797976227CA6BC65DC6DF2F9B34B1 /* OIDURLSessionProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLSessionProvider.m; path = Sources/AppAuthCore/OIDURLSessionProvider.m; sourceTree = "<group>"; };
 		E045D8CC0292D6DAF114066FE95D850A /* OIDRegistrationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationRequest.m; path = Sources/AppAuthCore/OIDRegistrationRequest.m; sourceTree = "<group>"; };
-		EE8421145E87635335167C9C19DB47E4 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Sources/AppAuthCore/Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		EF9852680BCD6EC8B15F622B5B92A838 /* AppAuth-AppAuthCore_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "AppAuth-AppAuthCore_Privacy"; path = AppAuthCore_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8421145E87635335167C9C19DB47E4 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Sources/AppAuthCore/Resources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		EF9852680BCD6EC8B15F622B5B92A838 /* AppAuthCore_Privacy.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppAuthCore_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEA918E89A2A0E96065408A8C5C6097 /* OIDAuthorizationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationRequest.h; path = Sources/AppAuthCore/OIDAuthorizationRequest.h; sourceTree = "<group>"; };
 		F13EF57555CF631E3A2254554B1589EF /* OIDAuthorizationService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationService.m; path = Sources/AppAuthCore/OIDAuthorizationService.m; sourceTree = "<group>"; };
 		F196B54F95BF1F366B11A5B6BA4FE501 /* OIDGrantTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDGrantTypes.h; path = Sources/AppAuthCore/OIDGrantTypes.h; sourceTree = "<group>"; };
@@ -284,9 +284,9 @@
 		91455AFCD8DA7C7B9F9426D4356BF0EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */,
-				EF9852680BCD6EC8B15F622B5B92A838 /* AppAuth-AppAuthCore_Privacy */,
-				4ED2AD294BAE9F0DB54427F7A6CD8035 /* Pods-BillKeeper */,
+				3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */,
+				EF9852680BCD6EC8B15F622B5B92A838 /* AppAuthCore_Privacy.bundle */,
+				4ED2AD294BAE9F0DB54427F7A6CD8035 /* Pods_BillKeeper.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -405,7 +405,6 @@
 				71CCB330CDEDA9BC0D8F01722DEE64B9 /* ExternalUserAgent */,
 				A60992BEB2F03F560A3C5F35A62C70A3 /* Support Files */,
 			);
-			name = AppAuth;
 			path = AppAuth;
 			sourceTree = "<group>";
 		};
@@ -482,7 +481,7 @@
 			);
 			name = "AppAuth-AppAuthCore_Privacy";
 			productName = AppAuthCore_Privacy;
-			productReference = EF9852680BCD6EC8B15F622B5B92A838 /* AppAuth-AppAuthCore_Privacy */;
+			productReference = EF9852680BCD6EC8B15F622B5B92A838 /* AppAuthCore_Privacy.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		5C642AA10FB29936669CC269F42079C6 /* AppAuth */ = {
@@ -501,7 +500,7 @@
 			);
 			name = AppAuth;
 			productName = AppAuth;
-			productReference = 3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */;
+			productReference = 3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B09E942C479C503FCB485BBC37CB9724 /* Pods-BillKeeper */ = {
@@ -520,7 +519,7 @@
 			);
 			name = "Pods-BillKeeper";
 			productName = Pods_BillKeeper;
-			productReference = 4ED2AD294BAE9F0DB54427F7A6CD8035 /* Pods-BillKeeper */;
+			productReference = 4ED2AD294BAE9F0DB54427F7A6CD8035 /* Pods_BillKeeper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -572,7 +571,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				310AEC030BEECE38DEB35C48C8238F70 /* AppAuth-AppAuthCore_Privacy in Resources */,
+				310AEC030BEECE38DEB35C48C8238F70 /* AppAuthCore_Privacy.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,7 +693,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppAuth";
 				IBSC_MODULE = AppAuth;
 				INFOPLIST_FILE = "Target Support Files/AppAuth/ResourceBundle-AppAuthCore_Privacy-AppAuth-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				PRODUCT_NAME = AppAuthCore_Privacy;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -717,7 +716,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -810,7 +809,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppAuth";
 				IBSC_MODULE = AppAuth;
 				INFOPLIST_FILE = "Target Support Files/AppAuth/ResourceBundle-AppAuthCore_Privacy-AppAuth-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				PRODUCT_NAME = AppAuthCore_Privacy;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -871,7 +870,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
