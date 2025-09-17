@@ -7,3 +7,4 @@ timeline.xctimeline
 playground.xcworkspace
 .build/
 Carthage/Build/
+.idea
