@@ -122,6 +122,7 @@
 		2F4F5BE01A47C89A12990D4390A8BEEE /* OIDAuthStateChangeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateChangeDelegate.h; path = Sources/AppAuthCore/OIDAuthStateChangeDelegate.h; sourceTree = "<group>"; };
 		3189926983B5029EE5AE253D003465B4 /* OIDServiceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceConfiguration.h; path = Sources/AppAuthCore/OIDServiceConfiguration.h; sourceTree = "<group>"; };
 		374BE34709A96E889A3C7CC40D9F473B /* OIDExternalUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgent.h; path = Sources/AppAuthCore/OIDExternalUserAgent.h; sourceTree = "<group>"; };
+		3B1FFD132E33BE0B00B52C4B /* BillKeeperShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BillKeeperShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B71A951839C2B17CF2B2CFC2BFF1B3B /* OIDErrorUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDErrorUtilities.m; path = Sources/AppAuthCore/OIDErrorUtilities.m; sourceTree = "<group>"; };
 		3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F4E7C507F343F792345D191456CB4F /* Pods-BillKeeper-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BillKeeper-frameworks.sh"; sourceTree = "<group>"; };
@@ -212,6 +213,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B1FFD102E33BE0B00B52C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C21EA5D66902DE57A0B3CB9F8C870693 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,6 +295,7 @@
 				3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */,
 				EF9852680BCD6EC8B15F622B5B92A838 /* AppAuthCore_Privacy.bundle */,
 				4ED2AD294BAE9F0DB54427F7A6CD8035 /* Pods_BillKeeper.framework */,
+				3B1FFD132E33BE0B00B52C4B /* BillKeeperShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -467,6 +476,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3B1FFD122E33BE0B00B52C4B /* BillKeeperShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B1FFD1E2E33BE0B00B52C4B /* Build configuration list for PBXNativeTarget "BillKeeperShareExtension" */;
+			buildPhases = (
+				3B1FFD0F2E33BE0B00B52C4B /* Sources */,
+				3B1FFD102E33BE0B00B52C4B /* Frameworks */,
+				3B1FFD112E33BE0B00B52C4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BillKeeperShareExtension;
+			packageProductDependencies = (
+			);
+			productName = BillKeeperShareExtension;
+			productReference = 3B1FFD132E33BE0B00B52C4B /* BillKeeperShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		3B932EC9659D505694902B50F4EB3D8B /* AppAuth-AppAuthCore_Privacy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86199AADA4801788AE1B8F0CAF0C4AF7 /* Build configuration list for PBXNativeTarget "AppAuth-AppAuthCore_Privacy" */;
@@ -528,8 +556,13 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					3B1FFD122E33BE0B00B52C4B = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -547,11 +580,19 @@
 				5C642AA10FB29936669CC269F42079C6 /* AppAuth */,
 				3B932EC9659D505694902B50F4EB3D8B /* AppAuth-AppAuthCore_Privacy */,
 				B09E942C479C503FCB485BBC37CB9724 /* Pods-BillKeeper */,
+				3B1FFD122E33BE0B00B52C4B /* BillKeeperShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B1FFD112E33BE0B00B52C4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6D0AA272FCF4B182323782CEC5E7DEA7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -579,6 +620,13 @@
 
 /* Begin PBXSourcesBuildPhase section */
 		24353940B1C56CA8EDF120CFAA33374A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1FFD0F2E33BE0B00B52C4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -648,11 +696,82 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3B1FFD1B2E33BE0B00B52C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = BillKeeperShareExtension/BillKeeperShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8W5AN2L7Y5;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BillKeeperShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BillKeeperShareExt;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxipoo.BillKeeperShareExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B1FFD1C2E33BE0B00B52C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = BillKeeperShareExtension/BillKeeperShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8W5AN2L7Y5;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BillKeeperShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BillKeeperShareExt;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxipoo.BillKeeperShareExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		51597D56E0187135C6BDFCC47CD4BE36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7C79D8D563B1DEE710CA9E5646668BA /* Pods-BillKeeper.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -822,7 +941,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 25A19582FCA6B47B56A1D6028831C5BD /* Pods-BillKeeper.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -960,6 +1078,15 @@
 			buildConfigurations = (
 				51597D56E0187135C6BDFCC47CD4BE36 /* Debug */,
 				B267669AC93FC7C965D3025E662F9A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B1FFD1E2E33BE0B00B52C4B /* Build configuration list for PBXNativeTarget "BillKeeperShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1FFD1B2E33BE0B00B52C4B /* Debug */,
+				3B1FFD1C2E33BE0B00B52C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

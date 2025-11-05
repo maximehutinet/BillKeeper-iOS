@@ -1,25 +1,29 @@
 import VisionKit
 import SwiftUI
+import PDFKit
 
 final class VNCameraCoordinator: NSObject, VNDocumentCameraViewControllerDelegate {
-    @Binding var document: Document?
+    @Binding var pdfFile: PDFDocument?
     var dismiss : DismissAction
     
-    init(dismiss: DismissAction, document: Binding<Document?>) {
-        self._document = document
+    init(dismiss: DismissAction, pdfFile: Binding<PDFDocument?>) {
         self.dismiss = dismiss
+        self._pdfFile = pdfFile
     }
 
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
-        var images: [UIImage] = []
+        let pdfDocument = PDFDocument()
         for i in 0..<scan.pageCount {
             let originalImage = scan.imageOfPage(at: i)
             let processedImage = ImageUtils(image: originalImage)
                 .compressImage()
                 .getImage()
-            images.append(processedImage)
+            let pdfPage = PDFPage(image: processedImage)
+            if (pdfPage != nil) {
+                pdfDocument.insert(pdfPage!, at: pdfDocument.pageCount)
+            }
         }
-        document = Document(images: images)
+        pdfFile = pdfDocument
         dismiss()
     }
 

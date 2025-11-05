@@ -27,6 +27,7 @@ struct BillListView: View {
                     .font(.body)
                     .foregroundColor(.primary)
                     
+                    BillStatusBadgeView(status: bill.status)
                 }
                 .padding(.vertical, 4)
             }

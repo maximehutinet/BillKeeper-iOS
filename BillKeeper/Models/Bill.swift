@@ -1,4 +1,5 @@
 import Foundation
+
 struct Bill: Decodable, Identifiable {
     let id: UUID
     let dateTime: Date?

@@ -15,19 +15,44 @@
 		3B331FFF2D7EF50B0025DE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B331FF62D7EF50B0025DE7D /* Assets.xcassets */; };
 		3B3320012D7EF50B0025DE7D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B331FFA2D7EF50B0025DE7D /* Launch Screen.storyboard */; };
 		3B3320022D7EF50B0025DE7D /* ScannedDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF22D7EF50B0025DE7D /* ScannedDocumentView.swift */; };
-		3B3320032D7EF50B0025DE7D /* ImageCarrouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF12D7EF50B0025DE7D /* ImageCarrouselView.swift */; };
 		3B3320042D7EF50B0025DE7D /* BillKeeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF72D7EF50B0025DE7D /* BillKeeperApp.swift */; };
 		3B3320052D7EF50B0025DE7D /* VNCameraCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FFC2D7EF50B0025DE7D /* VNCameraCoordinator.swift */; };
-		3B3320062D7EF50B0025DE7D /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FEB2D7EF50B0025DE7D /* Document.swift */; };
 		3B3320072D7EF50B0025DE7D /* VNCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF42D7EF50B0025DE7D /* VNCameraView.swift */; };
 		3B3320092D7EF50B0025DE7D /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF82D7EF50B0025DE7D /* HttpClient.swift */; };
 		3B33200A2D7EF50B0025DE7D /* UploadSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FF32D7EF50B0025DE7D /* UploadSuccessView.swift */; };
 		3B33200B2D7EF50B0025DE7D /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331FED2D7EF50B0025DE7D /* BlackButton.swift */; };
 		3B3320112D7EFF790025DE7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3320102D7EFF760025DE7D /* LoginView.swift */; };
+		3B68518D2EBA58D800613B5E /* PDFKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B68518C2EBA58D200613B5E /* PDFKitView.swift */; };
 		3B7A16962D80D00900CD9F7F /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A16952D80CFC500CD9F7F /* AppView.swift */; };
+		3BA2D8A82EBB7AA8006748F5 /* BillStatusBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2D8A72EBB7AA2006748F5 /* BillStatusBadgeView.swift */; };
 		3BD5C3D52E3386F800499BB1 /* BillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5C3D42E3386E500499BB1 /* BillListView.swift */; };
+		3BEEEC052E33D68D00D3DB6E /* BillKeeperFileSharing.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3BEEEBFB2E33D68D00D3DB6E /* BillKeeperFileSharing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B53ADA5D6AAD29B9DB94B0F6 /* Pods_BillKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0020AE031BE860EFB2B33B /* Pods_BillKeeper.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BEEEC032E33D68D00D3DB6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6CDEBA2D6BAEC900439279 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEEEBFA2E33D68D00D3DB6E;
+			remoteInfo = BillKeeperFileSharing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3BEEEC062E33D68D00D3DB6E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3BEEEC052E33D68D00D3DB6E /* BillKeeperFileSharing.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11686A390A59883B72D89599 /* Pods-BillKeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillKeeper.debug.xcconfig"; path = "Target Support Files/Pods-BillKeeper/Pods-BillKeeper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -35,10 +60,9 @@
 		3B141FBF2DC4F9A00048828F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3B141FC12DC4FC7E0048828F /* Beneficiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beneficiary.swift; sourceTree = "<group>"; };
 		3B141FC32DC4FCE60048828F /* ParsingJobStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingJobStatus.swift; sourceTree = "<group>"; };
-		3B331FEB2D7EF50B0025DE7D /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		3B1FFD1F2E33C08500B52C4B /* BillKeeper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BillKeeper.entitlements; sourceTree = "<group>"; };
 		3B331FED2D7EF50B0025DE7D /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		3B331FEF2D7EF50B0025DE7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3B331FF12D7EF50B0025DE7D /* ImageCarrouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarrouselView.swift; sourceTree = "<group>"; };
 		3B331FF22D7EF50B0025DE7D /* ScannedDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedDocumentView.swift; sourceTree = "<group>"; };
 		3B331FF32D7EF50B0025DE7D /* UploadSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSuccessView.swift; sourceTree = "<group>"; };
 		3B331FF42D7EF50B0025DE7D /* VNCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNCameraView.swift; sourceTree = "<group>"; };
@@ -49,16 +73,32 @@
 		3B331FFA2D7EF50B0025DE7D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3B331FFC2D7EF50B0025DE7D /* VNCameraCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNCameraCoordinator.swift; sourceTree = "<group>"; };
 		3B3320102D7EFF760025DE7D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3B68518C2EBA58D200613B5E /* PDFKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitView.swift; sourceTree = "<group>"; };
 		3B6CDEC22D6BAEC900439279 /* BillKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7A16952D80CFC500CD9F7F /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		3BA2D8A72EBB7AA2006748F5 /* BillStatusBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillStatusBadgeView.swift; sourceTree = "<group>"; };
+		3BA2D8A92EBB81B0006748F5 /* Info-Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Dev.plist"; sourceTree = "<group>"; };
 		3BD5C3D42E3386E500499BB1 /* BillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListView.swift; sourceTree = "<group>"; };
+		3BEEEBFB2E33D68D00D3DB6E /* BillKeeperFileSharing.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BillKeeperFileSharing.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0020AE031BE860EFB2B33B /* Pods_BillKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE629B9165DDA761605A6E9 /* Pods-BillKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillKeeper.release.xcconfig"; path = "Target Support Files/Pods-BillKeeper/Pods-BillKeeper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3BEEEC092E33D68D00D3DB6E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3BEEEBFA2E33D68D00D3DB6E /* BillKeeperFileSharing */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3B33200C2D7EF8A20025DE7D /* Auth */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Auth; sourceTree = "<group>"; };
+		3B6851872EBA3E4000613B5E /* FileSharing */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = FileSharing; sourceTree = "<group>"; };
 		3B7A16972D80E03600CD9F7F /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
+		3BEEEBFC2E33D68D00D3DB6E /* BillKeeperFileSharing */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (3BEEEC092E33D68D00D3DB6E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = BillKeeperFileSharing; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +107,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53ADA5D6AAD29B9DB94B0F6 /* Pods_BillKeeper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEEEBF82E33D68D00D3DB6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +135,6 @@
 				3B141FC12DC4FC7E0048828F /* Beneficiary.swift */,
 				3B141FBF2DC4F9A00048828F /* User.swift */,
 				3B0A6D7B2DC3A2600047C114 /* Bill.swift */,
-				3B331FEB2D7EF50B0025DE7D /* Document.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,10 +158,11 @@
 		3B331FF52D7EF50B0025DE7D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3BA2D8A72EBB7AA2006748F5 /* BillStatusBadgeView.swift */,
+				3B68518C2EBA58D200613B5E /* PDFKitView.swift */,
 				3BD5C3D42E3386E500499BB1 /* BillListView.swift */,
 				3B7A16952D80CFC500CD9F7F /* AppView.swift */,
 				3B3320102D7EFF760025DE7D /* LoginView.swift */,
-				3B331FF12D7EF50B0025DE7D /* ImageCarrouselView.swift */,
 				3B331FF22D7EF50B0025DE7D /* ScannedDocumentView.swift */,
 				3B331FF32D7EF50B0025DE7D /* UploadSuccessView.swift */,
 				3B331FF42D7EF50B0025DE7D /* VNCameraView.swift */,
@@ -126,6 +173,9 @@
 		3B331FFD2D7EF50B0025DE7D /* BillKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				3BA2D8A92EBB81B0006748F5 /* Info-Dev.plist */,
+				3B6851872EBA3E4000613B5E /* FileSharing */,
+				3B1FFD1F2E33C08500B52C4B /* BillKeeper.entitlements */,
 				3B7A16972D80E03600CD9F7F /* Utils */,
 				3B33200C2D7EF8A20025DE7D /* Auth */,
 				3B331FEC2D7EF50B0025DE7D /* Models */,
@@ -147,6 +197,7 @@
 			children = (
 				3B331FFD2D7EF50B0025DE7D /* BillKeeper */,
 				3B6CDEC42D6BAEC900439279 /* BillKeeper */,
+				3BEEEBFC2E33D68D00D3DB6E /* BillKeeperFileSharing */,
 				3B6CDEC32D6BAEC900439279 /* Products */,
 				5F7E9D5204110AFFB3548AC6 /* Pods */,
 				0F8A749ABBDBAD810874E981 /* Frameworks */,
@@ -157,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				3B6CDEC22D6BAEC900439279 /* BillKeeper.app */,
+				3BEEEBFB2E33D68D00D3DB6E /* BillKeeperFileSharing.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,19 +241,44 @@
 				3B6CDEBF2D6BAEC900439279 /* Frameworks */,
 				3B6CDEC02D6BAEC900439279 /* Resources */,
 				888CF4E0891A2DDFBBA2C432 /* [CP] Embed Pods Frameworks */,
+				3BEEEC062E33D68D00D3DB6E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3BEEEC042E33D68D00D3DB6E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				3B33200C2D7EF8A20025DE7D /* Auth */,
+				3B6851872EBA3E4000613B5E /* FileSharing */,
 				3B7A16972D80E03600CD9F7F /* Utils */,
 			);
 			name = BillKeeper;
 			productName = BillKeeper;
 			productReference = 3B6CDEC22D6BAEC900439279 /* BillKeeper.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3BEEEBFA2E33D68D00D3DB6E /* BillKeeperFileSharing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEEEC0A2E33D68D00D3DB6E /* Build configuration list for PBXNativeTarget "BillKeeperFileSharing" */;
+			buildPhases = (
+				3BEEEBF72E33D68D00D3DB6E /* Sources */,
+				3BEEEBF82E33D68D00D3DB6E /* Frameworks */,
+				3BEEEBF92E33D68D00D3DB6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3BEEEBFC2E33D68D00D3DB6E /* BillKeeperFileSharing */,
+			);
+			name = BillKeeperFileSharing;
+			packageProductDependencies = (
+			);
+			productName = BillKeeperFileSharing;
+			productReference = 3BEEEBFB2E33D68D00D3DB6E /* BillKeeperFileSharing.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -210,11 +287,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					3B6CDEC12D6BAEC900439279 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					3BEEEBFA2E33D68D00D3DB6E = {
+						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
@@ -232,6 +312,7 @@
 			projectRoot = "";
 			targets = (
 				3B6CDEC12D6BAEC900439279 /* BillKeeper */,
+				3BEEEBFA2E33D68D00D3DB6E /* BillKeeperFileSharing */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +325,13 @@
 				3B331FFE2D7EF50B0025DE7D /* Preview Assets.xcassets in Resources */,
 				3B331FFF2D7EF50B0025DE7D /* Assets.xcassets in Resources */,
 				3B3320012D7EF50B0025DE7D /* Launch Screen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEEEBF92E33D68D00D3DB6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,15 +391,15 @@
 				3B3320022D7EF50B0025DE7D /* ScannedDocumentView.swift in Sources */,
 				3BD5C3D52E3386F800499BB1 /* BillListView.swift in Sources */,
 				3B141FC22DC4FC810048828F /* Beneficiary.swift in Sources */,
-				3B3320032D7EF50B0025DE7D /* ImageCarrouselView.swift in Sources */,
 				3B3320042D7EF50B0025DE7D /* BillKeeperApp.swift in Sources */,
 				3B3320052D7EF50B0025DE7D /* VNCameraCoordinator.swift in Sources */,
-				3B3320062D7EF50B0025DE7D /* Document.swift in Sources */,
+				3B68518D2EBA58D800613B5E /* PDFKitView.swift in Sources */,
 				3B141FC42DC4FCE80048828F /* ParsingJobStatus.swift in Sources */,
 				3B3320072D7EF50B0025DE7D /* VNCameraView.swift in Sources */,
 				3B7A16962D80D00900CD9F7F /* AppView.swift in Sources */,
 				3B3320112D7EFF790025DE7D /* LoginView.swift in Sources */,
 				3B3320092D7EF50B0025DE7D /* HttpClient.swift in Sources */,
+				3BA2D8A82EBB7AA8006748F5 /* BillStatusBadgeView.swift in Sources */,
 				3B33200A2D7EF50B0025DE7D /* UploadSuccessView.swift in Sources */,
 				3B33200B2D7EF50B0025DE7D /* BlackButton.swift in Sources */,
 				3B0A6D7C2DC3A2650047C114 /* Bill.swift in Sources */,
@@ -319,7 +407,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BEEEBF72E33D68D00D3DB6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BEEEC042E33D68D00D3DB6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BEEEBFA2E33D68D00D3DB6E /* BillKeeperFileSharing */;
+			targetProxy = 3BEEEC032E33D68D00D3DB6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3B6CDECE2D6BAECB00439279 /* Debug */ = {
@@ -447,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BillKeeper/BillKeeper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BillKeeper/Preview Content\"";
@@ -454,7 +558,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BillKeeper/Info.plist;
+				INFOPLIST_FILE = "BillKeeper/Info-Dev.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bill Keeper";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Scanning documents";
@@ -488,6 +592,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BillKeeper/BillKeeper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BillKeeper/Preview Content\"";
@@ -523,6 +628,60 @@
 			};
 			name = Release;
 		};
+		3BEEEC072E33D68D00D3DB6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BillKeeperFileSharing/BillKeeperFileSharing.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8W5AN2L7Y5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BillKeeperFileSharing/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BillKeeperFileSharing;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxipoo.BillKeeper.BillKeeperFileSharing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BEEEC082E33D68D00D3DB6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BillKeeperFileSharing/BillKeeperFileSharing.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8W5AN2L7Y5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BillKeeperFileSharing/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BillKeeperFileSharing;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxipoo.BillKeeper.BillKeeperFileSharing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -540,6 +699,15 @@
 			buildConfigurations = (
 				3B6CDED12D6BAECB00439279 /* Debug */,
 				3B6CDED22D6BAECB00439279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BEEEC0A2E33D68D00D3DB6E /* Build configuration list for PBXNativeTarget "BillKeeperFileSharing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEEEC072E33D68D00D3DB6E /* Debug */,
+				3BEEEC082E33D68D00D3DB6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

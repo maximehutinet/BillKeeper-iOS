@@ -1,8 +1,9 @@
 import VisionKit
 import SwiftUI
+import PDFKit
 
 struct VNCameraView: UIViewControllerRepresentable {
-    @Binding var document: Document?
+    @Binding var pdfFile: PDFDocument?
     @Environment(\.dismiss) var dismiss
 
     typealias UIViewControllerType = VNDocumentCameraViewController
@@ -16,6 +17,6 @@ struct VNCameraView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {}
 
     func makeCoordinator() -> VNCameraCoordinator {
-        VNCameraCoordinator(dismiss: dismiss, document: $document)
+        VNCameraCoordinator(dismiss: dismiss, pdfFile: $pdfFile)
     }
 }
