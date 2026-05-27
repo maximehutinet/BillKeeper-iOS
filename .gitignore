@@ -8,3 +8,4 @@ playground.xcworkspace
 .build/
 Carthage/Build/
 BillKeeper/Info-Dev.plist
+.idea
